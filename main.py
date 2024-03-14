@@ -3,7 +3,7 @@ from tkinter.filedialog import asksaveasfilename
 from tkinter import filedialog
 from tkinter import messagebox 
 
-
+#Iniciando a janela
 root = tk.Tk()
 root.geometry("400x240")
 root.title("Bloco de notas")
