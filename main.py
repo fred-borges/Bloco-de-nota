@@ -30,29 +30,13 @@ def salvar_arquivo():
 
 
 #Abrir Arquivo
-def abrir_arquivo():
-    # Abre a caixa de diálogo para selecionar um arquivo
-    nome_arquivo = filedialog.askopenfilename()
 
-    # Verifica se o usuário escolheu um arquivo
-    if nome_arquivo:
-        with open(nome_arquivo, 'r') as arquivo:
-            # Lê o conteúdo do arquivo
-            conteudo = arquivo.read()
-
-            # Limpa o conteúdo atual do bloco de notas
-            textExample.delete(1.0, tk.END)
-
-            # Insere o conteúdo do arquivo no bloco de notas
-            textExample.insert(tk.END, conteudo)
 
 
 textExample = tk.Text(root, height=10)
 textExample.pack()
 
 
-btnRead = tk.Button(root, height=1, width=10, text="Ler", command=getTextInput)
-btnRead.pack()
 
 
 
@@ -62,7 +46,7 @@ btnSave.place(x=240,y=164)
 
 
 
-btnOpen = tk.Button(root, height=1, width=10, text="Abrir", command=abrir_arquivo)
+btnOpen = tk.Button(root, height=1, width=10, text="Abrir")
 btnOpen.pack()
 btnOpen.place(x=80,y=164)
 
